@@ -1,0 +1,98 @@
+.game-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-xl);
+  background: var(--surface-container-lowest);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 6px 0 var(--surface-container-high), 0 8px 16px rgba(27, 28, 25, 0.04);
+  text-align: center;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  min-height: 200px;
+}
+
+.game-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 0 var(--surface-container-high), 0 12px 24px rgba(27, 28, 25, 0.06);
+}
+
+.game-card:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 var(--surface-container-high);
+}
+
+.game-card__icon {
+  font-size: 4rem;
+  flex-shrink: 0;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--secondary-fixed);
+  border-radius: var(--radius-full);
+  box-shadow: 0 4px 0 var(--secondary-fixed-dim);
+}
+
+.game-card__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.game-card__title {
+  font-size: var(--font-headline-sm);
+  font-weight: 700;
+  color: var(--on-surface);
+  font-family: 'Rubik', sans-serif;
+  line-height: 1.2;
+}
+
+.game-card__description {
+  font-size: var(--font-body-sm);
+  color: var(--on-surface-variant);
+  font-family: 'Comfortaa', sans-serif;
+}
+
+/* Tablet */
+@media (min-width: 768px) and (orientation: landscape) {
+  .game-card {
+    padding: var(--space-xl);
+  }
+
+  .game-card__icon {
+    width: 5.5rem;
+    height: 5.5rem;
+    font-size: 4.5rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .game-card {
+    padding: var(--space-lg);
+    min-height: 180px;
+  }
+
+  .game-card__icon {
+    width: 4rem;
+    height: 4rem;
+    font-size: 3rem;
+  }
+
+  .game-card__title {
+    font-size: var(--font-label-lg);
+  }
+}
+
+/* Hover для desktop */
+@media (hover: hover) and (pointer: fine) {
+  .game-card:hover {
+    filter: brightness(1.02);
+  }
+}

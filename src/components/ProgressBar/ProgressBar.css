@@ -1,0 +1,61 @@
+.progress-bar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  width: 100%;
+}
+
+.progress-bar__text {
+  font-size: var(--font-sm);
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.progress-bar__track {
+  width: 100%;
+  height: 8px;
+  background: var(--bg-secondary);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar__fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  border-radius: 10px;
+  transition: width 0.5s ease;
+}
+
+.progress-bar__dots {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.progress-bar__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  transition: all 0.3s ease;
+}
+
+.progress-bar__dot.completed {
+  background: var(--success-color);
+  transform: scale(1.1);
+}
+
+/* Адаптация для планшетов */
+@media (min-width: 768px) and (orientation: landscape) {
+  .progress-bar__track {
+    height: 10px;
+  }
+
+  .progress-bar__dot {
+    width: 14px;
+    height: 14px;
+  }
+}

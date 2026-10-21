@@ -1,0 +1,61 @@
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--surface-container-lowest);
+  border-radius: var(--radius-full);
+  box-shadow: 0 3px 0 var(--surface-container-high);
+  color: var(--on-surface);
+  font-size: var(--font-label-md);
+  font-weight: 600;
+  font-family: 'Rubik', sans-serif;
+  transition: all 0.15s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background: var(--surface-container-low);
+  transform: translateX(-2px);
+}
+
+.back-button:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 var(--surface-container-high);
+}
+
+.back-button svg {
+  width: 20px;
+  height: 20px;
+}
+
+.back-button span {
+  line-height: 1;
+}
+
+/* Адаптация для планшетов */
+@media (min-width: 768px) and (orientation: landscape) {
+  .back-button {
+    padding: var(--space-md) var(--space-lg);
+  }
+
+  .back-button svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .back-button {
+    padding: 0.5rem var(--space-sm);
+  }
+}
+
+/* Hover для desktop */
+@media (hover: hover) and (pointer: fine) {
+  .back-button:hover {
+    filter: brightness(1.02);
+  }
+}

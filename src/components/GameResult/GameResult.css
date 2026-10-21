@@ -1,0 +1,127 @@
+.game-result {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  padding: var(--spacing-lg);
+  animation: fadeIn 0.3s ease-in;
+}
+
+.game-result__content {
+  background: var(--bg-primary);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xl);
+  max-width: 90%;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-lg);
+  animation: slideUp 0.3s ease-out;
+}
+
+.game-result__emoji {
+  font-size: clamp(60px, 12vw, 100px);
+  animation: bounce 0.6s ease-in-out;
+}
+
+.game-result__message {
+  font-size: var(--font-2xl);
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.game-result__score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-lg);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 300px;
+}
+
+.game-result__score-number {
+  font-size: var(--font-2xl);
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.game-result__score-text {
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.game-result__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  width: 100%;
+  max-width: 300px;
+}
+
+.game-result__button {
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  font-size: var(--font-md);
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.game-result__button--primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: var(--text-white);
+}
+
+.game-result__button--secondary {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.game-result__button:active {
+  transform: scale(0.95);
+  box-shadow: none;
+}
+
+/* Адаптация для планшетов */
+@media (min-width: 768px) and (orientation: landscape) {
+  .game-result__content {
+    max-width: 600px;
+    padding: clamp(24px, 4vw, 48px);
+  }
+
+  .game-result__buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+  }
+
+  .game-result__button {
+    flex: 1;
+    min-width: 150px;
+  }
+}
+
+/* Hover для desktop */
+@media (hover: hover) and (pointer: fine) {
+  .game-result__button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+}

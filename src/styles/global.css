@@ -1,0 +1,424 @@
+/* Импорт шрифтов */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Rubik:wght@500;600;700;800&display=swap');
+
+:root {
+  /* Цветовая палитра - Lively Playful Speech System */
+  --surface: #fbf9f3;
+  --surface-dim: #dbdad4;
+  --surface-bright: #fbf9f3;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #f5f3ee;
+  --surface-container: #f0eee8;
+  --surface-container-high: #eae8e2;
+  --surface-container-highest: #e4e2dd;
+  --on-surface: #1b1c19;
+  --on-surface-variant: #3d4947;
+  --inverse-surface: #30312d;
+  --inverse-on-surface: #f2f1eb;
+  --outline: #6d7a77;
+  --outline-variant: #bcc9c6;
+  --surface-tint: #006a60;
+
+  /* Primary - Herbal Meadow Green */
+  --primary: #00685d;
+  --on-primary: #ffffff;
+  --primary-container: #008376;
+  --on-primary-container: #f4fffb;
+  --inverse-primary: #6fd8c8;
+  --primary-fixed: #8cf5e4;
+  --primary-fixed-dim: #6fd8c8;
+  --on-primary-fixed: #00201c;
+  --on-primary-fixed-variant: #005048;
+
+  /* Secondary - Warm Amber Sun */
+  --secondary: #8e4e14;
+  --on-secondary: #ffffff;
+  --secondary-container: #ffab69;
+  --on-secondary-container: #783d01;
+  --secondary-fixed: #ffdcc4;
+  --secondary-fixed-dim: #ffb780;
+  --on-secondary-fixed: #2f1400;
+  --on-secondary-fixed-variant: #6f3800;
+
+  /* Tertiary - Clear Sky Blue */
+  --tertiary: #00628c;
+  --on-tertiary: #ffffff;
+  --tertiary-container: #027cb0;
+  --on-tertiary-container: #fcfcff;
+  --tertiary-fixed: #c8e6ff;
+  --tertiary-fixed-dim: #87ceff;
+  --on-tertiary-fixed: #001e2e;
+  --on-tertiary-fixed-variant: #004c6d;
+
+  /* Error */
+  --error: #ba1a1a;
+  --on-error: #ffffff;
+  --error-container: #ffdad6;
+  --on-error-container: #93000a;
+
+  /* Background */
+  --background: #fbf9f3;
+  --on-background: #1b1c19;
+  --surface-variant: #e4e2dd;
+
+  /* Радиусы - Pill-shaped foundation */
+  --radius-sm: 0.5rem;   /* 8px */
+  --radius-md: 1rem;     /* 16px */
+  --radius-lg: 1.5rem;   /* 24px */
+  --radius-xl: 2rem;     /* 32px */
+  --radius-2xl: 3rem;    /* 48px */
+  --radius-full: 9999px;
+
+  /* Spacing */
+  --space-xs: 0.375rem;  /* 6px */
+  --space-sm: 0.75rem;   /* 12px */
+  --space-md: 1.25rem;   /* 20px */
+  --space-lg: 1.75rem;   /* 28px */
+  --space-xl: 2.5rem;    /* 40px */
+  --gutter: 1.25rem;     /* 20px */
+  --gutter-mobile: 0.75rem; /* 12px */
+  --margin: 2rem;        /* 32px */
+  --margin-mobile: 1rem; /* 16px */
+
+  /* Typography - Rubik & Comfortaa */
+  --font-display-hero: 48px;
+  --font-display-hero-mobile: 34px;
+  --font-headline-lg: 32px;
+  --font-headline-lg-mobile: 26px;
+  --font-headline-md: 24px;
+  --font-headline-sm: 20px;
+  --font-body-lg: 18px;
+  --font-body-md: 16px;
+  --font-body-sm: 14px;
+  --font-label-lg: 16px;
+  --font-label-md: 14px;
+  --font-label-sm: 12px;
+
+  /* Tactile 3D Shadows - Bottom-edge depth */
+  --shadow-card: 0 6px 0 #eae8e2, 0 12px 24px rgba(38, 70, 83, 0.05);
+  --shadow-button-primary: 0 4px 0 #005048;
+  --shadow-button-secondary: 0 4px 0 #6f3800;
+  --shadow-button-tertiary: 0 4px 0 #004c6d;
+  --shadow-button-surface: 0 3px 0 #eae8e2;
+  --shadow-floating: 0 16px 36px rgba(42, 157, 143, 0.12), 0 4px 12px rgba(38, 70, 83, 0.06);
+
+  /* Safe area для мобильных устройств */
+  --safe-area-top: env(safe-area-inset-top, 0px);
+  --safe-area-right: env(safe-area-inset-right, 0px);
+  --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-area-left: env(safe-area-inset-left, 0px);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Comfortaa', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--background);
+  color: var(--on-surface);
+  font-size: var(--font-body-md);
+  font-weight: 500;
+  line-height: 1.5;
+  touch-action: pan-x pan-y;
+  overscroll-behavior: none;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Typography classes */
+.font-display-hero {
+  font-family: 'Rubik', sans-serif;
+  font-size: var(--font-display-hero);
+  font-weight: 800;
+  line-height: 1.17;
+  letter-spacing: -0.02em;
+}
+
+.font-headline-lg {
+  font-family: 'Rubik', sans-serif;
+  font-size: var(--font-headline-lg);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.font-headline-md {
+  font-family: 'Rubik', sans-serif;
+  font-size: var(--font-headline-md);
+  font-weight: 700;
+  line-height: 1.33;
+}
+
+.font-headline-sm {
+  font-family: 'Rubik', sans-serif;
+  font-size: var(--font-headline-sm);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.font-body-lg {
+  font-family: 'Comfortaa', sans-serif;
+  font-size: var(--font-body-lg);
+  font-weight: 600;
+  line-height: 1.56;
+}
+
+.font-body-md {
+  font-family: 'Comfortaa', sans-serif;
+  font-size: var(--font-body-md);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.font-body-sm {
+  font-family: 'Comfortaa', sans-serif;
+  font-size: var(--font-body-sm);
+  font-weight: 500;
+  line-height: 1.43;
+}
+
+.font-label-lg {
+  font-family: 'Rubik', sans-serif;
+  font-size: var(--font-label-lg);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+}
+
+.font-label-md {
+  font-family: 'Rubik', sans-serif;
+  font-size: var(--font-label-md);
+  font-weight: 600;
+  line-height: 1.29;
+  letter-spacing: 0.01em;
+}
+
+.font-label-sm {
+  font-family: 'Rubik', sans-serif;
+  font-size: var(--font-label-sm);
+  font-weight: 600;
+  line-height: 1.33;
+}
+
+/* Кнопки - Chunky 3D Pushable Style */
+button {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  transition: all 0.15s ease;
+  border-radius: var(--radius-full);
+}
+
+button:active:not(:disabled) {
+  transform: translateY(4px);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Primary Button */
+.btn-primary {
+  background: var(--primary);
+  color: var(--on-primary);
+  padding: 0.75rem 1.5rem;
+  box-shadow: var(--shadow-button-primary);
+  min-height: 3.75rem; /* 60px */
+}
+
+.btn-primary:active:not(:disabled) {
+  box-shadow: none;
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background: var(--secondary);
+  color: var(--on-secondary);
+  padding: 0.75rem 1.5rem;
+  box-shadow: var(--shadow-button-secondary);
+  min-height: 3.75rem;
+}
+
+.btn-secondary:active:not(:disabled) {
+  box-shadow: none;
+}
+
+/* Surface Button */
+.btn-surface {
+  background: var(--surface-container-lowest);
+  color: var(--on-surface);
+  padding: 0.75rem 1.5rem;
+  box-shadow: var(--shadow-button-surface);
+}
+
+.btn-surface:active:not(:disabled) {
+  box-shadow: none;
+}
+
+/* Утилитарные классы */
+.container {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+/* Cards - Tactile rounded containers */
+.card {
+  background: var(--surface-container-lowest);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 0 #dbdad4, 0 16px 32px rgba(38, 70, 83, 0.08);
+  transform: translateY(-2px);
+}
+
+/* Скрытие полос прокрутки где они не нужны */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+.slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 767px) {
+  :root {
+    --font-display-hero: var(--font-display-hero-mobile);
+    --font-headline-lg: var(--font-headline-lg-mobile);
+    --gutter: var(--gutter-mobile);
+    --margin: var(--margin-mobile);
+  }
+
+  .container {
+    padding-left: var(--gutter-mobile);
+    padding-right: var(--gutter-mobile);
+  }
+}
+
+/* Адаптивность для планшетов */
+@media (min-width: 768px) and (max-width: 1023px) {
+  :root {
+    --gutter: var(--gutter);
+  }
+}
+
+/* Адаптивность для desktop */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+/* Hover эффекты только для устройств с мышью */
+@media (hover: hover) and (pointer: fine) {
+  button:hover:not(:disabled) {
+    filter: brightness(1.05);
+  }
+
+  .card:hover {
+    cursor: pointer;
+  }
+}
+
+/* Touch feedback для мобильных */
+@media (hover: none) and (pointer: coarse) {
+  button:active:not(:disabled) {
+    filter: brightness(0.95);
+  }
+}
