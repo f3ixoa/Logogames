@@ -5,7 +5,7 @@ const getRecognitionConstructor = () => {
 
 export const isSpeechRecognitionSupported = () => Boolean(getRecognitionConstructor());
 
-const normalizeSpeech = (value) => value
+const normalizeSpeech = (value) => (value || '')
   .toLocaleLowerCase('ru-RU')
   .replace(/ё/g, 'е')
   .replace(/[^а-я\s]/gi, ' ')
@@ -25,7 +25,14 @@ const matchesSyllable = (transcript, target) => {
   });
 };
 
-export const startSpeechRecognition = (target, callbacks = {}) => {
+const matchesExactWord = (transcript, target) => {
+  const cleanTarget = normalizeSpeech(target);
+  const cleanTranscript = normalizeSpeech(transcript);
+  if (!cleanTarget || !cleanTranscript) return false;
+  return cleanTranscript === cleanTarget;
+};
+
+export const startSpeechRecognition = (target, callbacks = {}, options = {}) => {
   const Recognition = getRecognitionConstructor();
   if (!Recognition) {
     callbacks.onError?.('Распознавание речи не поддерживается в этом браузере.');
@@ -84,10 +91,10 @@ export const startSpeechRecognition = (target, callbacks = {}) => {
 
     const hypotheses = [...alternatives, transcript.trim()];
     const cleanTarget = normalizeSyllable(target);
-    const exactMatch = hypotheses.some((hypothesis) => matchesSyllable(hypothesis, target));
-    const leConsonantFallback = cleanTarget === 'лэ'
-      && hypotheses.some((hypothesis) => normalizeSyllable(hypothesis) === 'л');
-    const matched = exactMatch || leConsonantFallback;
+    const matched = options.matchMode === 'exact-word'
+      ? alternatives.some((hypothesis) => matchesExactWord(hypothesis, target))
+      : hypotheses.some((hypothesis) => matchesSyllable(hypothesis, target))
+        || (cleanTarget === 'лэ' && hypotheses.some((hypothesis) => normalizeSyllable(hypothesis) === 'л'));
     callbacks.onResult?.({ transcript: transcript.trim(), matched, alternatives });
   };
 

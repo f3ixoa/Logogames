@@ -6,73 +6,154 @@ export const words = {
     { word: "РУКА", image: "✋", description: "Рука" },
     { word: "РЫБА", image: "🐟", description: "Рыба" },
     { word: "РАДУГА", image: "🌈", description: "Радуга" },
-    { word: "РАКЕТА", image: "🚀", description: "Ракета" }
+    { word: "РАКЕТА", image: "🚀", description: "Ракета" },
+    { word: "РОБОТ", image: "🤖", description: "Робот" },
+    { word: "РУЧКА", image: "🖊️", description: "Ручка" },
+    { word: "РОМАШКА", image: "🌼", description: "Ромашка" },
+    { word: "РЫНОК", image: "🛒", description: "Рынок" },
+    { word: "РОМБ", image: "🔷", description: "Ромб" },
+    { word: "РЫСЬ", image: "🐈", description: "Рысь" }
   ],
   "soft-r": [
     { word: "РЯБИНА", image: "🌳", description: "Рябина" },
     { word: "РЯЖЕНКА", image: "🥛", description: "Ряженка" },
     { word: "РЮКЗАК", image: "🎒", description: "Рюкзак" },
     { word: "РЕКА", image: "🏞️", description: "Река" },
-    { word: "РИС", image: "🍚", description: "Рис" }
+    { word: "РИС", image: "🍚", description: "Рис" },
+    { word: "РЕПА", image: "🥬", description: "Репа" },
+    { word: "РЕЧКА", image: "🌊", description: "Речка" },
+    { word: "РЕМЕНЬ", image: "🪢", description: "Ремень" },
+    { word: "РЕПКА", image: "🌱", description: "Репка" },
+    { word: "РЕШЁТКА", image: "🪟", description: "Решётка" },
+    { word: "РЯД", image: "🪑", description: "Ряд" },
+    { word: "РЕЗИНА", image: "🛞", description: "Резина" }
   ],
   "hard-l": [
     { word: "ЛУК", image: "🧅", description: "Лук" },
     { word: "ЛАМПА", image: "💡", description: "Лампа" },
     { word: "ЛОДКА", image: "🚣", description: "Лодка" },
     { word: "ЛУНА", image: "🌙", description: "Луна" },
-    { word: "ЛЕС", image: "🌲", description: "Лес" }
+    { word: "ЛОЖКА", image: "🥄", description: "Ложка" },
+    { word: "ЛОШАДЬ", image: "🐴", description: "Лошадь" },
+    { word: "ЛЫЖИ", image: "🎿", description: "Лыжи" },
+    { word: "ЛАСТОЧКА", image: "🐦", description: "Ласточка" },
+    { word: "ЛОБ", image: "🙂", description: "Лоб" },
+    { word: "ЛУЖА", image: "💧", description: "Лужа" },
+    { word: "ЛОПАТА", image: "🪏", description: "Лопата" },
+    { word: "ЛОСЬ", image: "🫎", description: "Лось" }
   ],
   "soft-l": [
     { word: "ЛИМОН", image: "🍋", description: "Лимон" },
     { word: "ЛИСА", image: "🦊", description: "Лиса" },
     { word: "ЛЕНТА", image: "🎀", description: "Лента" },
     { word: "ЛЕБЕДЬ", image: "🦢", description: "Лебедь" },
-    { word: "ЛИСТ", image: "🍃", description: "Лист" }
+    { word: "ЛИСТ", image: "🍃", description: "Лист" },
+    { word: "ЛЁД", image: "🧊", description: "Лёд" },
+    { word: "ЛЕЙКА", image: "🚿", description: "Лейка" },
+    { word: "ЛИПА", image: "🌳", description: "Липа" },
+    { word: "ЛЕСТНИЦА", image: "🪜", description: "Лестница" },
+    { word: "ЛЕНЬ", image: "🛋️", description: "Лень" },
+    { word: "ЛЁН", image: "🌾", description: "Лён" },
+    { word: "ЛЕПЕСТОК", image: "🌸", description: "Лепесток" }
   ],
   "hard-s": [
     { word: "СОК", image: "🧃", description: "Сок" },
     { word: "СЛОН", image: "🐘", description: "Слон" },
     { word: "СОВА", image: "🦉", description: "Сова" },
     { word: "СОЛНЦЕ", image: "☀️", description: "Солнце" },
-    { word: "СОБАКА", image: "🐕", description: "Собака" }
+    { word: "СОБАКА", image: "🐕", description: "Собака" },
+    { word: "САЛАТ", image: "🥗", description: "Салат" },
+    { word: "САМОЛЁТ", image: "✈️", description: "Самолёт" },
+    { word: "САПОГ", image: "🥾", description: "Сапог" },
+    { word: "САНКИ", image: "🛷", description: "Санки" },
+    { word: "САХАР", image: "🧂", description: "Сахар" },
+    { word: "СЫР", image: "🧀", description: "Сыр" },
+    { word: "СУМКА", image: "👜", description: "Сумка" }
   ],
   "soft-s": [
     { word: "СИТО", image: "🥄", description: "Сито" },
     { word: "СИНИЦА", image: "🐦", description: "Синица" },
     { word: "СЕМЬ", image: "7️⃣", description: "Семь" },
-    { word: "СИРЕНЬ", image: "💜", description: "Сирень" }
+    { word: "СИРЕНЬ", image: "💜", description: "Сирень" },
+    { word: "СЕНО", image: "🌾", description: "Сено" },
+    { word: "СЕРДЦЕ", image: "❤️", description: "Сердце" },
+    { word: "СЕТЬ", image: "🕸️", description: "Сеть" },
+    { word: "СИГНАЛ", image: "🚦", description: "Сигнал" },
+    { word: "СИРЕНА", image: "🚨", description: "Сирена" },
+    { word: "СИЛА", image: "💪", description: "Сила" },
+    { word: "СИНЕЕ", image: "🔵", description: "Синее" },
+    { word: "СЕМЕНА", image: "🌱", description: "Семена" }
   ],
   "hard-z": [
     { word: "ЗАЯЦ", image: "🐰", description: "Заяц" },
     { word: "ЗОНТ", image: "☂️", description: "Зонт" },
     { word: "ЗАМОК", image: "🏰", description: "Замок" },
-    { word: "ЗЕБРА", image: "🦓", description: "Зебра" }
+    { word: "ЗУБ", image: "🦷", description: "Зуб" },
+    { word: "ЗОЛОТО", image: "🪙", description: "Золото" },
+    { word: "ЗАВТРАК", image: "🍳", description: "Завтрак" },
+    { word: "ЗВУК", image: "🔊", description: "Звук" },
+    { word: "ЗАПАХ", image: "🌷", description: "Запах" },
+    { word: "ЗАБОР", image: "🚧", description: "Забор" },
+    { word: "ЗАЛ", image: "🏛️", description: "Зал" },
+    { word: "ЗАВОД", image: "🏭", description: "Завод" },
+    { word: "ЗУБР", image: "🦬", description: "Зубр" }
   ],
   "soft-z": [
     { word: "ЗИМА", image: "❄️", description: "Зима" },
     { word: "ЗЕМЛЯ", image: "🌍", description: "Земля" },
-    { word: "ЗЕРКАЛО", image: "🪞", description: "Зеркало" }
+    { word: "ЗЕРКАЛО", image: "🪞", description: "Зеркало" },
+    { word: "ЗЕЛЕНЬ", image: "🥬", description: "Зелень" },
+    { word: "ЗЕФИР", image: "🍥", description: "Зефир" },
+    { word: "ЗЯБЛИК", image: "🐦", description: "Зяблик" },
+    { word: "ЗЕРНО", image: "🌾", description: "Зерно" },
+    { word: "ЗЕЛЬЕ", image: "🧪", description: "Зелье" },
+    { word: "ЗЕМЛЯНИКА", image: "🍓", description: "Земляника" },
+    { word: "ЗЕБРА", image: "🦓", description: "Зебра" },
+    { word: "ЗЕНИТ", image: "🌅", description: "Зенит" },
+    { word: "ЗЕЛЁНЫЙ", image: "💚", description: "Зелёный" }
   ],
   "hard-sh": [
     { word: "ШАР", image: "🎈", description: "Шар" },
     { word: "ШАПКА", image: "🧢", description: "Шапка" },
     { word: "ШУБА", image: "🧥", description: "Шуба" },
-    { word: "МЫШЬ", image: "🐭", description: "Мышь" }
+    { word: "МЫШЬ", image: "🐭", description: "Мышь" },
+    { word: "ШАРФ", image: "🧣", description: "Шарф" },
+    { word: "ШИШКА", image: "🌰", description: "Шишка" },
+    { word: "ШОКОЛАД", image: "🍫", description: "Шоколад" },
+    { word: "ШУМ", image: "📢", description: "Шум" },
+    { word: "ШИШИГА", image: "👹", description: "Шишига" },
+    { word: "ШКАФ", image: "🗄️", description: "Шкаф" },
+    { word: "ШТОРЫ", image: "🪟", description: "Шторы" },
+    { word: "ШАШКИ", image: "⚫", description: "Шашки" }
   ],
   "hard-zh": [
     { word: "ЖУК", image: "🪲", description: "Жук" },
     { word: "ЖИРАФ", image: "🦒", description: "Жираф" },
     { word: "ЁЖ", image: "🦔", description: "Ёж" },
-    { word: "ЖАБА", image: "🐸", description: "Жаба" }
+    { word: "ЖАБА", image: "🐸", description: "Жаба" },
+    { word: "ЖЕЛУДЬ", image: "🌰", description: "Желудь" },
+    { word: "ЖЕМЧУГ", image: "🦪", description: "Жемчуг" },
+    { word: "ЖИЛЕТ", image: "🦺", description: "Жилет" },
+    { word: "ЖИВОТ", image: "🤰", description: "Живот" },
+    { word: "ЖИВОТНОЕ", image: "🐾", description: "Животное" },
+    { word: "ЖАР", image: "🔥", description: "Жар" },
+    { word: "ЖЁЛУДИ", image: "🌳", description: "Жёлуди" },
+    { word: "ЖИЗНЬ", image: "🌱", description: "Жизнь" }
   ],
   "soft-shch": [
     { word: "ЩЁТКА", image: "🪥", description: "Щётка" },
     { word: "ЩУКА", image: "🐟", description: "Щука" },
     { word: "ЩЕНОК", image: "🐶", description: "Щенок" },
-    { word: "ПЛАЩ", image: "🧥", description: "Плащ" }
+    { word: "ПЛАЩ", image: "🧥", description: "Плащ" },
+    { word: "ЩАВЕЛЬ", image: "🌿", description: "Щавель" },
+    { word: "ЩЁКИ", image: "😊", description: "Щёки" },
+    { word: "ЩИТ", image: "🛡️", description: "Щит" },
+    { word: "ЩЕПКА", image: "🪵", description: "Щепка" },
+    { word: "ЩЕНОЧЕК", image: "🐕", description: "Щеночек" },
+    { word: "ЩЕБЕТ", image: "🐤", description: "Щебет" },
+    { word: "ЩЕЛЬ", image: "🚪", description: "Щель" },
+    { word: "ЩЁЛК", image: "🫰", description: "Щёлк" }
   ]
 };
 
-export const getWords = (soundId) => {
-  return words[soundId] || [];
-};
+export const getWords = (soundId) => words[soundId] || [];
